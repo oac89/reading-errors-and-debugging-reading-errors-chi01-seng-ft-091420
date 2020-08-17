@@ -125,7 +125,7 @@ three looks to be an incomplete variable assignment:
 ```rb
 x = 1
 
-x =
+x = 1
 ```
 
 Removing this code or finishing the assignment will resolve the error. A very
@@ -135,6 +135,7 @@ methods. If you were to paste the following into `lib/a_syntax_error.rb`:
 ```ruby
 2.times do
   puts "hi"
+  end
 ```
 
 You would get an error similar to the last:
@@ -156,7 +157,7 @@ you will receive a TypeError. For example, if you try and add a string to an
 integer, Ruby will complain.
 
 ```ruby
-1 + "1"
+1 + 1
 ```
 
 Will produce the following error:
@@ -168,7 +169,7 @@ TypeError: String can't be coerced into Fixnum
 This is the issue we see in `lib/a_type_error.rb`. The culprit is this line:
 
 ```rb
-1 + "is the loneliest number"
+1.to_s + "is the loneliest number"
 ```
 
 One possible solution to this would be to make sure all values being added
@@ -209,7 +210,7 @@ order on Seamless. The order came to $64.25 for you and your three coworkers and
 you all agreed to split the total evenly, so you write:
 
 ```ruby
-total = "64.25"
+total = 64.25
 num_of_people = 4
 price_per_person = total / num_of_people
 ```
@@ -257,7 +258,7 @@ for that particular object.
 For example: 
 
 ```ruby
-missing_value = nil
+missing_value = x
 
 missing_value.length
 ```
