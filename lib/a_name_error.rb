@@ -1,3 +1,4 @@
 greeting = "hello world"
 
-puts greetings
+puts greeting
+
