@@ -1,3 +1,3 @@
 1 + 1
 
-1 + "is the loneliest number"
+to_.s1 + "is the loneliest number"
